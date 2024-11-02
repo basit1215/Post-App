@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Post App</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><span class="red">Abdul</span> Basit</div>
+        <div class="link"><a href="https://github.com/basit1215" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </header>
+
+    <section class="hero">
+
+        <div class="text-area">
+            <div class="headers" id="headers">
+                <h4>Create Post</h4>
+            </div>
+
+            <div class="areas" id="post-background">
+                <textarea class="area" placeholder="Type your post" id="text-area"></textarea>
+            </div>
+
+            <div class="likes" id="likes">
+                <div class="like">
+                    <div class="icn"><i class="fa-regular fa-thumbs-up" id="likeede"></i></div>
+                    <div class="like-con"><span id="likeed" onclick="liked()">Like</span></div>
+                </div>
+
+                <div class="like">
+                    <div class="icn"><i class="fa-regular fa-comment"></i></div>
+                    <div class="like-con" id="comments" onclick="comment()">Comment</div>
+                    <div class="input" id="inpt"><input type="text" placeholder="Write a comment" class="inp"></div>
+                </div>
+
+                <div class="like">
+                    <div class="icn"><i class="fa-solid fa-share"></i></div>
+                    <div class="like-con">Share</div>
+                </div>
+            </div>
+
+            <div class="items" id="items">
+                <ul>
+                    <li><input onchange="changeColor()" type="color" class="items-width clr" id="text-color"></li>
+
+                    <li onclick="changeStyle()">B</li>
+                    <li onclick="changeStyle()"><i>I</i></li>
+                    <li onclick="changeStyle()"><u>U</u></li>
+                    <li><select name="" id="" onchange="selectEmoji()">
+                            <option value="😃">😃</option>
+                            <option value="😂">😂</option>
+                            <option value="😊">😊</option>
+                            <option value="😍">😍</option>
+                        </select></li>
+                    <li><input onchange="changeFontSize()" type="range"></li>
+                </ul>
+            </div>
+            <br>
+
+            <div class="items" id="item">
+                <ul>
+                    <li><img onclick="setBackground()" class="items-width" src="image/im1.jpg" alt=""></li>
+                    <li><img onclick="setBackground()" class="items-width" src="image/asad.jpg" alt=""></li>
+                    <li><img onclick="setBackground()" class="items-width" src="image/im5.jpg" alt=""></li>
+                    <li><img onclick="setBackground()" class="items-width" src="image/abcd.jpg" alt=""></li>
+                    <li><img onclick="setBackground()" class="items-width" src="image/j.jpg" alt=""></li>
+                    <li><img onclick="setBackground()" class="items-width" src="image/k.jpg" alt=""></li>
+                    <li><img onclick="setBackground()" class="items-width" src="image/l.jpg" alt=""></li>
+                    <li><input onchange="changeBackgroundColor()" type="color" class="items-widths"></li>
+                </ul>
+            </div>
+
+            <button class="btn" id="btns" onclick="createPsot()">Post</button>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <h3>Designed and Developed by: <a href="https://github.com/basit1215">Abdul Basit</a></h3>
+    </footer>
+
+
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
